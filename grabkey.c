@@ -4,6 +4,7 @@
 
 static PyObject *my_callback = NULL;
 static int keycode = 0;
+static Display *disp = NULL;
 
 static PyObject *set_callback(PyObject *self, PyObject *args)
 {
@@ -42,8 +43,6 @@ static PyObject *exec_callback(PyObject *self, PyObject *args)
 
 static PyObject *set_grabkey(PyObject *self, PyObject *args)
 {
-    Display *disp;
-    XEvent e;
     PyObject *result;
 
     if (!PyArg_ParseTuple(args, "i", &keycode)){
@@ -58,7 +57,16 @@ static PyObject *set_grabkey(PyObject *self, PyObject *args)
     }
 
     XGrabKey(disp, keycode, ControlMask, DefaultRootWindow(disp), True, GrabModeAsync, GrabModeAsync);
+    return Py_BuildValue("i", 1);
+}
+
+static PyObject *start_grabkey(PyObject *self, PyObject *args)
+{
+    XEvent e;
+    PyObject *result;
+
     while(1){
+        if (XPending(disp)){
         XNextEvent(disp, &e);
         switch (e.type){
             case KeyPress:
@@ -68,20 +76,39 @@ static PyObject *set_grabkey(PyObject *self, PyObject *args)
                     printf("exec callback failed.\n");
                     return NULL;
                 }
+                break;
+        }
+        }
+        else {
+            if (flag_stop_grabkey){
                 XUngrabKey(disp, keycode, ControlMask, DefaultRootWindow(disp));
                 XCloseDisplay(disp);
-                return Py_BuildValue("s", "set_grabkey() normal end.");
-                break;
+            }
+
         }
     }
  
     return Py_BuildValue("i", keycode);
 }
 
+static PyObject *end_grabkey(PyObject *self, PyObject *args)
+{
+    printf("in end_grabkey()\n");
+    XUngrabKey(disp, keycode, ControlMask, DefaultRootWindow(disp));
+    printf("end XUngrabKey()\n");
+    XCloseDisplay(disp);
+    printf("end XCloseDisplay()\n");
+
+    Py_INCREF(Py_None);
+    return Py_None;
+}
+
 static PyMethodDef mymethods[] = {
     {"set_callback", set_callback, METH_VARARGS, "set my callback"},
     {"exec_callback", exec_callback, METH_VARARGS, "exec callback"},
     {"set_grabkey", set_grabkey, METH_VARARGS, "set grab key"},
+    {"start_grabkey", start_grabkey, METH_VARARGS, "start grab key"},
+    {"end_grabkey", end_grabkey, METH_VARARGS, "end grab key"},
     {NULL, NULL, 0, NULL}
 };
 
