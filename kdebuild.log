@@ -1,0 +1,784 @@
+1. freeglut 2.6.0
+
+2. libtiff 3.9.4
+	./configure --prefix=/usr
+
+3. little cms 1.19
+	./configure --prefix=/usr --with-python
+
+4. libmng 1.0.10
+
+5. attr 2.4.44
+	./configure --prefix=/usr --libexecdir=/usr/lib
+
+6. GLib 2.26.1
+	PCRE_LIBS=-lpcre PCRE_CFLAGS=" " LIBFFI_LIBS=-lffi LIBFFI_CFLAGS=-I/usr/lib/libffi-3.0.10/include ./configure --prefix=/usr --with-pcre=system
+
+7. shared-mime-info 0.71
+	./configure --prefix=/usr
+
+8. desktop-file-utils 0.17
+	./configure --prefix=/usr
+
+9. GLib 2.26.1 (再インストール)
+	PCRE_LIBS=-lpcre PCRE_CFLAGS=" " LIBFFI_LIBS=-lffi LIBFFI_CFLAGS=-I/usr/lib/libffi-3.0.10/include ./configure --prefix=/usr --with-pcre=system
+
+10. GStreamer 0.10.30
+	./configure --prefix=/usr	
+
+11. liboil 0.3.17
+	./configure --prefix=/usr
+
+12. glitz 0.5.6
+	./configure --prefix=/usr
+
+13. DirectFB 1.2.10
+	./configure --prefix=/usr --sysconfdir=/etc
+
+14. cairo 1.10.0
+	./configure --prefix=/usr
+
+15. gobject-introspection 0.9.3
+	./configure --prefix=/usr --disable-tests
+
+16. pango 1.28.2
+	./configure --prefix=/usr --sysconfdir=/etc --enable-man
+
+17. ALSA library 1.0.23
+	./configure --enable-static
+
+18. CDParanoia-III 10.2
+	./configure --prefix=/usr
+
+19. faad 2.7
+	./configure --prefix=/usr
+
+20. nasm 2.09.04
+	./configure --prefix=/usr
+
+21. libogg 1.2.0
+	./configure --prefix=/usr
+
+22. flac 1.2.1
+	./configure --prefix=/usr --disable-thorough-tests --enable-sse
+
+--- 2011/11/14
+23. libvorbis 1.3.2
+	./configure --prefix=/usr
+
+24. libsndfile 1.0.21
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+25. lame 3.98.4
+	./configure --prefix=/usr --enable-mp3rtp
+
+26. audiofile 0.2.7
+	./configure --prefix=/usr
+
+27. dbus-glib 0.88
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+28. docbook XML 4.5
+
+29. docbook XSL stylesheets 1.76.1
+
+30. dbus gobject bindings (eggdbus) 0.6
+	./configure --prefix=/usr --enable-man-pages
+
+31. Linux-PAM 1.1.3
+	./configure --sbindir=/lib/security             --docdir=/usr/share/doc/Linux-PAM-1.1.3             --enable-read-both-confs
+
+32. polkit 0.96
+	./configure --prefix=/usr --sysconfdir=/etc     --libexecdir=/usr/lib/polkit-1 --localstatedir=/var --enable-man-pages --enable-introspection
+
+33. ConsoleKit 0.4.1
+	./configure --prefix=/usr --sysconfdir=/etc     --libexecdir=/usr/lib/ConsoleKit --localstatedir=/var     --enable-pam-module
+
+34. speex 1.2rc1
+	./configure --prefix=/usr --enable-sse
+
+35. libsamplerate 0.1.7
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+36. python-cddb 1.4
+
+37. python-eyed3 0.6.17
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+38. python-ogg 1.3
+	python config_unix.py --prefix /usr
+	python setup.py build
+	python setup.py install
+
+39. python-pyvorbis 1.4
+	python config_unix.py --prefix /usr
+	python setup.py build
+	python setup.py install
+
+40. jackd2
+	./waf configure --dbus --enable-pkg-config-dbus-service-dir --prefix=/usr
+	./waf build
+	./waf install
+
+41. liba52
+	./configure --prefix=/usr --enable-shared
+
+42. ALSA plugins 1.0.23
+	./configure
+
+43. json-c 0.9
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+44. libcap2 2.19
+	make
+
+45. libdaemon 0.14
+	./configure --prefix=/usr
+
+46. dbus-python 0.83.0
+	./configure --prefix=/usr --docdir=/usr/share/doc/dbus-python-0.83.2
+
+47. avahi 0.6.27
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-distro=lfs 
+		--enable-core-docs --disable-qt3 --disable-qt4 --disable-mono --disable-monodoc
+		 --disable-gtk --disable-gtk3 --disable-pygtk
+
+48. tdb 1.2.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+49. pulseaudio 0.9.22
+	./configure --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/pulseaudio
+	 --with-module-dir=/usr/lib/pulseaudio/modules --with-udev-rules-dir=/etc/udev/rules.d
+	 --localstatedir=/var
+
+50. libusb 1.0.8
+	./configure --prefix=/usr
+
+51. oniguruma 5.9.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+52. slang 2.2.2
+	./configure --prefix=/usr --sysconfdir=/etc
+
+53. gpm 1.20.6
+	./configure --prefix=/usr --sysconfdir=/etc
+
+54. aalib 1.4rc5
+	./configure --prefix=/usr
+
+55. DirectFB 1.2.10
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+56. libgii 1.0.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+57. libggi 2.2.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+58. giflib 4.1.6
+	CFLAGS="-I/usr/X11/include" CPPFLAGS="-I/usr/X11/include" ./configure --prefix=/usr
+	 --sysconfdir=/etc --localstatedir=/var
+
+59. libid3tag 0.15.1b
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+60. imlib2 1.4.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+61. libcaca 0.99 beta17
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+62. SDL 1.2.14
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+63. libtheora 1.1.1
+	./configure --prefix=/usr
+
+64. yasm 1.2.0
+	./configure --prefix=/usr --enable-python
+
+65. libvpx 0.9.5
+	../libvpx-v0.9.5/configure --prefix=/usr --enable-shared --as=yasm
+
+66. x264 20111207 snapshot
+	./configure --prefix=/usr --enable-shared --enable-visualize
+
+67. xvid 1.2.2
+	./configure --prefix=/usr
+
+68. amrnb 7.0.0.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+69. amrwb 7.0.0.4
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+70. faac 1.28
+	./configure --prefix=/usr
+
+71. libgsm 1.0.13
+	Makefile編集
+	make
+
+72. libgpg-error 1.6
+	./configure --prefix=/usr
+
+73. libgcrypt 1.4.5
+	./configure --prefix=/usr
+
+74. libtasn1 2.7
+	./configure --prefix=/usr
+
+75. nettle 2.0
+	./configure --prefix=/usr
+
+76. gc 6.8
+	./configure --prefix=/usr --datadir=/usr/share/doc --enable-cplusplus
+
+77. libunistring 0.9.3
+	./configure --prefix=/usr
+
+78. guile 1.8.7
+	./configure --prefix=/usr
+	libguile/guile-snarf-docs.in のcppコマンドに-Pオプションを追加する。
+
+79. gnutls 2.8.6
+	./configure --prefix=/usr --enable-guile
+
+80. librtmp 2.3
+	make SYS=posix
+
+81. orc 0.4.6
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+82. ffmpeg 0.6
+	../configure --prefix=/usr --enable-shared --disable-static --enable-gpl --enable-libfaac
+	 --enable-nonfree --enable-libmp3lame --enable-libschroedinger
+	 --enable-libspeex --enable-libvorbis --enable-libx264 --enable-libtheora --enable-libvorbis
+	 
+
+83. DirectFB 1.2.10
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+84. libIDL 0.8.14
+	./configure --prefix=/usr
+
+85. orbit2 2.14.18
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+86. jasper 1.900.1
+	./configure --prefix=/usr --enable-shared
+
+87. rarian 0.8.1
+	./configure --prefix=/usr --localstatedir=/var
+
+88. gnome-doc-utils 0.20.1
+	./configure --prefix=/usr --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var
+
+89. which 2.20
+	./configure --prefix=/usr
+
+90. sgml-common 0.6.3
+	./configure --prefix=/usr --sysconfdir=/etc
+
+91. xmlto 0.0.23
+	./configure --prefix=/usr
+
+92. opensp 1.5.2
+	./configure --prefix=/usr --disable-static --disable-doc-build 
+	--enable-default-catalog=/etc/sgml/catalog --enable-http --enable-default-search-path=/usr/share/sgml
+
+93. openjade 1.3.2
+
+94. docbook sgml 4.5
+
+95. docbook dsssl stylesheet 1.79
+
+96. gnome-common 2.28.0
+
+97. gtk-doc 1.15
+	./configure --prefix=/usr
+
+98. gdk-pixbuf 2.22.0
+
+99. atk 1.32.0
+	./configure --prefix=/usr --enable-introspection=auto
+
+100. hicolor-icon-theme 0.11
+	./configure --prefix=/usr
+
+101. docbook sgml 3.1
+
+102. docbook utils 0.6.14
+	./configure --prefix=/usr
+
+103. gtk+-2 2.22.0
+	./configure --prefix=/usr --sysconfdir=/etc --disable-introspection
+
+104. pulseaudio 0.9.22 (再)
+	./configure --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/pulseaudio  --with-module-dir=/usr/lib/pulseaudio/modules --with-udev-rules-dir=/etc/udev/rules.d --localstatedir=/var
+
+105. gconf 2.32.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+106. gnome mime data 2.18.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+107. popt 1.16
+	./configure --prefix=/usr
+
+108. gamin 0.1.10
+	./configure --prefix=/usr --libexecdir=/usr/sbin
+
+109. acl 2.2.49
+	./configure --prefix=/usr --libexecdir=/usr/lib
+
+110. samba 3.5.4
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-piddir=/run 
+	--with-pammodulesdir=/lib/security --with-fhs --enable-nss-wrapper
+
+111. ALSA plugins 1.0.23
+	./configure
+
+112. openssh 5.5p1
+	./configure --prefix=/usr --sysconfdir=/etc/ssh --datadir=/usr/share/sshd --libexecdir=/usr/lib/openssh
+             --with-md5-passwords --with-privsep-path=/var/lib/sshd --with-pam --with-tcp-wrappers
+
+113. gnome vfs 2.24.3
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+114. pci utilities 3.1.7
+	make PREFIX=/usr ZLIB=no
+	make PREFIX=/usr install
+	make PREFIX=/usr install-lib
+
+115. usb utilities 004
+	./configure --prefix=/usr --disable-zlib
+
+116. libusb-compat 0.1.3
+	./configure --prefix=/usr
+
+117. udev 166
+	./configure --prefix=/usr --sysconfdir=/etc --sbindir=/sbin --with-rootlibdir=/lib --libexecdir=/lib/udev
+
+118. libvisual 0.4.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+119. GStreamer Base Plug-ins 0.10.30
+	./configure --prefix=/usr --disable-introspection
+
+120. qt4 4.7.1
+	./configure -prefix /usr -sysconfdir /etc -gstreamer -no-phonon -nomake examples -nomake demos
+
+121. qjson 0.7.1
+	mkdir build
+	cd build
+	ccmake ..
+	cd ..
+	make
+	make install
+
+122. eigen2 2.0.15
+	ccmake .
+	make
+	make install
+
+123. pysip 4.10.5
+	python configure.py
+	make
+	su; make install
+
+124. pyqt 4.7.4
+	python configure.py
+	make
+	su; make install
+
+125. ruby 1.9.2 p290
+	./configure --prefix=/usr --enable-shared --enable-pthread --enable-install-doc
+
+126. openjpeg 1.3
+	make
+	su; make install
+
+127. poppler 0.14.3
+	./configure --prefix=/usr --sysconfdir=/etc --enable-xpdf-headers --enable-libcurl
+
+128. poppler-data 0.4.2
+	make prefix=/usr install
+
+129. libical 0.44
+	./configure --prefix=/usr --sysconfdir=/etc --enable-cxx --enable-python --with-bdb4
+
+130. libatasmart 0.17
+	./configure --prefix=/usr
+
+131. device-mapper 1.02.39 (LVM2 2.02.54)
+	./configure --prefix=/usr --enable-pkgconfig --enable-dmeventd --enable-cmdlib
+
+132. parted 2.3
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-readline
+
+133. sg3 utils 1.29
+	./configure --prefix=/usr
+
+134. udisks 1.0.1
+	./configure --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/udisks --localstatedir=/var
+	 --enable-man-pages
+
+135. upower 0.9.5
+	./configure --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/upower --localstatedir=/var
+	 --enable-man-pages
+
+136. libiodbc 3.52.6
+	ubuntuパッチ適用
+	 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-iodbc-inidir=/etc/iodbc
+
+137. liblqr 0.4.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-install-man
+
+138. libexif 0.6.19
+	./configure --prefix=/usr
+
+139. libcroco 0.6.2
+	./configure --prefix=/usr
+
+140. pycairo 1.8.8
+	./configure --prefix=/usr
+
+141. pygobject 2.21.5
+	./configure --prefix=/usr
+
+142. libglade 2.6.4
+	./configure --prefix=/usr
+
+143. pygtk 2.21.0
+	./configure --prefix=/usr
+
+144. libbonobo 2.32.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+145. libgsf 1.14.18
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+146. librsvg 2.32.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+147. libwebp 0.1.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+148. imagemagick 6.6.2.6
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-modules
+
+149. net-tools 1.60
+	see BLFS instructions.
+
+150. virtuoso 6.1.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --without-internal-zlib
+	 --program-transform-name="s/isql/isql-v/" --without-internal-zlib --enable-python
+
+151. exiv2 0.19
+	./configure --prefix=/usr
+
+152. raptor 1.4.21
+	./configure --prefix=/usr
+
+153. rasqal 0.9.19
+	./configure --prefix=/usr
+
+154. redland 1.0.10 → 1.0.11を入れるべし
+	./configure --prefix=/usr
+
+155. clucene 0.9.21b
+	./configure --prefix=/usr
+
+156. boost 1.42.0
+	./bootstrap.sh --prefix=/usr --libdir=/usr/lib
+	su
+	./bjam install
+
+157. libdbusmenu-qt 0.6.4
+	cmake -C .
+	ccmake .
+	make
+	su; make install
+
+158. soprano 2.5.2
+	see BLFS
+
+159. strigi 0.7.2
+	see BLFS
+
+160. automoc4 0.9.88
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+161. attica 0.1.4
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+162. polkit-qt 0.95.1
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+163. akonadi 1.4.0
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+164. cagibi 0.1.1
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+165. libmad 0.15.1b
+	./configure --prefix=/usr
+
+166. libfame 0.9.1
+	./configure --prefix=/usr
+
+167. libdvdread 4.1.3
+	./configure2 --prefix=/usr
+
+168. libdvdnav 4.1.3
+	./configure2 --prefix=/usr
+
+169. libmodplug 0.8.8.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+170. libdca 0.0.5
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+171. wavpack 4.60.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+172. xine-lib 1.1.18.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+173. phonon 4.4.2
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+174. dmtx 0.7.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+175. qrencode 3.1.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+176. prison 1.0
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+		
+177. oxygen icons 4.5.1
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+178. qimageblitz 0.0.6
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+179. taglib 1.6.3
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-mp4 --enable-asf
+
+180. taglib extra 1.0.1
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+181. shared desktop ontologies 0.5
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	ccmake .. で、pkgconfigインストールディレクトリを修正
+	make; su; make install
+
+182. ilmbase 1.0.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+183. openexr 1.6.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+184. libart_lgpl 2.3.21
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+185. gssapi 1.0.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+186. aspell 0.60.6
+	./configure --prefix=/usr
+
+187. hspell 1.1
+	./configure --prefix=/usr
+
+188. hunspell 1.2.11
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-ui --with-readline
+
+189. enchant 1.6.0
+	./configure --prefix=/usr
+
+190. kdelibs 4.5.5
+	cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_PREFIX_PATH=/usr -DKDE_DEFAULT_HOME=.kde4       -DSYSCONF_INSTALL_DIR=/etc/kde4       -DDOCBOOKXML_CURRENTDTD_DIR=/usr/share/xml/docbook/xml-dtd-4.5       ..
+
+191. gnupg 1.4.10
+	./configure --prefix=/usr --libexecdir=/usr/lib
+
+192. gpgme 1.2.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+193. libassuan 1.0.5
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+194. cyrus sasl 2.1.23
+	./configure --prefix=/usr             --sysconfdir=/etc             --with-dbpath=/var/lib/sasl/sasldb2             --with-saslauthd=/var/run/saslauthd
+
+195. kdepimlibs 4.5.5
+	cmake -DCMAKE_INSTALL_PREFIX=/usr -DKDE_DEFAULT_HOME=.kde4       -DSYSCONF_INSTALL_DIR=/etc/kde4 ..
+
+196. libnl 1.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+197. nspr 4.8.6
+	./configure --prefix=/usr --with-mozilla --with-pthreads   $([ $(arch) = x86_64 ] && echo --enable-64bit)
+
+198. nss 3.12.9
+	see BLFS
+
+199. wpa_supplicant 0.6.10
+	cp defconfig .config
+	make
+	su; make install
+
+200. wireless tools 30pre9
+	make
+	su
+	make PREFIX=/usr install
+
+201. ppp 2.4.5
+	see BLFS
+
+202. iptables 1.4.4
+	./configure --prefix=/usr                 --bindir=/sbin                --sbindir=/sbin               --libdir=/lib
+
+203. NetworkManager 0.8.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-distro=redhat
+
+204. libcanberra 0.25
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+205. openslp 1.2.1
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+206. libssh 0.4.6
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	ccmake .. で、少し修正
+	make; su; make install
+
+207. kdebase-runtime 4.5.1
+	cmake -DCMAKE_INSTALL_PREFIX=/usr -DKDE_DEFAULT_HOME=.kde4       -DSYSCONF_INSTALL_DIR=/etc/kde4 ..
+
+208. kdebase 4.5.1
+	FindXKB.cmakeファイルを以下のとおり変更。
+-    check_library_exists(X11 XkbLockModifiers "" HAVE_XKB)
++    check_library_exists(X11 XkbLockModifiers "${X11_LIBRARY_DIR}" HAVE_XKB)
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	ccmake .. で、少し修正
+	make; su; make install
+
+209. kdegraphics 4.5.5
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	ccmake .. で、少し修正
+	make; su; make install
+
+210. mono 2.6.7
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+211. kdebindings 4.5.1
+	を開いて、polkit-qt関係のパスを修正する。また ccmake ..でpolkit-qt関係の設定を変更する。
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	ccmake .. で、少し修正
+	make; su; make install
+
+	途中でsmokegenがsegfaultを起こすので、以下ページの内容で修正を行う。
+https://projects.kde.org/projects/kde/kdebindings/smoke/smokegen/repository/revisions/7b6f05a84cc8cb1b3558e8cf3a7d046505895c87/diff/type_compiler.cpp
+
+	polkit-qtをONにするとコンパイルできないので、polkit-qtは外したほうがいい。
+
+212. eina 0.9.9.49898
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+213. eet 1.3.2
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+214. qzion 0.4.0
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+	ただしエラーが発生するので以下修正を適用する。
+--- qzion-0.4.0/python/qzion/qzionobject.sip	2009-05-02 12:14:03.000000000 +0200
++++ qzion-0.4.0-new/python/qzion/qzionobject.sip	2009-10-06 23:26:34.000000000 +0200
+@@ -10,7 +10,7 @@ class QZionObject : QObject
+ 
+ %ConvertToSubClassCode
+     static struct classes {
+-        char *name;
++        const char *name;
+         sipWrapperType **type;
+     } cls[] = {
+         {sipName_QZionText, &sipClass_QZionText},
+
+215. qedje 0.4.0
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make; su; make install
+
+	make installでqedje.pcがないとエラーが出る。
+	build/src以下にあるので、1つ上の階層にcpしてからmake installする。
+
+216. lm-sensors 3.1.2
+	Makefileを編集してmake;su;make install
+
+217. libgd2 2.0.36
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+218. wxWidget 2.8.11
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-plugins --with-sdl --with-gnomevfs --with-opengl
+
+219. gnuplot 4.4.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+220. libgnome 2.32.0
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+221. cln 1.3.1
+	./configure --prefix=/usr --enable-shared --sysconfdir=/etc --localstatedir=/var
+
+222. libqalculate 0.9.7
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+223. qalculate 0.9.7
+
+224. kdebase-workspace 4.5.5
+	mkdir build; cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr     -DKDE_DEFAULT_HOME=.kde4     -DSYSCONF_INSTALL_DIR=/etc/kde4 -DPOLKITQT_INCLUDE_DIR=/usr/include/polkit-qt-1 -DPOLKITQT_CORE_LIBRARY=/usr/lib/libpolkit-qt-core-1.so -DPOLKITQT_GUI_LIBRARY=/usr/lib/libpolkit-qt-gui-1.so  ..
+
+
+	avahi
+		mono
+		gtk+2
+		libglade
+		qt3
+		qt4
+		python-twisted
+		pygtk
+
+
+
