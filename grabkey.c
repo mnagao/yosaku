@@ -5,6 +5,7 @@
 static PyObject *my_callback = NULL;
 static int keycode = 0;
 static Display *disp = NULL;
+static int flag_stop_grabkey = 0;
 
 static PyObject *set_callback(PyObject *self, PyObject *args)
 {
@@ -57,6 +58,8 @@ static PyObject *set_grabkey(PyObject *self, PyObject *args)
     }
 
     XGrabKey(disp, keycode, ControlMask, DefaultRootWindow(disp), True, GrabModeAsync, GrabModeAsync);
+    XGrabKey(disp, 54, ControlMask, DefaultRootWindow(disp), True, GrabModeAsync, GrabModeAsync);
+
     return Py_BuildValue("i", 1);
 }
 
@@ -67,22 +70,26 @@ static PyObject *start_grabkey(PyObject *self, PyObject *args)
 
     while(1){
         if (XPending(disp)){
-        XNextEvent(disp, &e);
-        switch (e.type){
-            case KeyPress:
-                printf("Key pressed. keycode = %d\n", e.xkey.keycode);
-                result = PyObject_CallObject(my_callback, Py_BuildValue("(i)", e.xkey.keycode));
-                if (result == NULL){
-                    printf("exec callback failed.\n");
-                    return NULL;
-                }
-                break;
-        }
+            XNextEvent(disp, &e);
+            switch (e.type){
+                case KeyPress:
+                    printf("Key pressed. keycode = %d\n", e.xkey.keycode);
+                    if (e.xkey.keycode == 54){
+                        flag_stop_grabkey = 1;
+                    }
+                    result = PyObject_CallObject(my_callback, Py_BuildValue("(i)", e.xkey.keycode));
+                    if (result == NULL){
+                        printf("exec callback failed.\n");
+                        return NULL;
+                    }
+                    break;
+            }
         }
         else {
             if (flag_stop_grabkey){
                 XUngrabKey(disp, keycode, ControlMask, DefaultRootWindow(disp));
                 XCloseDisplay(disp);
+                break;
             }
 
         }

@@ -8,6 +8,7 @@ def hotkey_callback(arg):
 grabkey.set_callback(hotkey_callback)
 grabkey.set_grabkey(34)
 grabkey.start_grabkey()
+#grabkey.end_grabkey()
 
 print "yosaku exit."
 
